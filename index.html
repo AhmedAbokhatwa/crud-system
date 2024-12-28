@@ -13,24 +13,25 @@
       <p>product management system</p>
     </div>
     <div class="title">
-      <input type="text" placeholder="title">
+      <input type="text" id = "title" placeholder="title">
       <div class="details">
-        <input type="number" placeholder="price">
-        <input type="number" placeholder="tax">
-        <input type="number" placeholder="ads">
-        <input type="number" placeholder="discount">
-        <small id="total">22123</small>
+        <input onkeyup="getTotal()" type="number" id = "price" placeholder="price">
+        <input onkeyup="getTotal()" type="number" id = "tax" placeholder="tax">
+        <input onkeyup="getTotal()" type="number" id = "ads" placeholder="ads">
+        <input onkeyup="getTotal()" type="number" id = "discount" placeholder="discount">
+        <small id="total" >00000</small>
       </div>
       <div class="count-details">
-        <input type="text">
-        <input type="text">
-        <button>Create</button>
+        <input type="number" id="count" placeholder="Count">
+        <input type="text" id="category" placeholder="Category">
+        <button id="submit" >Create</button>
       </div>  
-      <input type="text">
+      <input onkeyup="getData(this.value)" type="text" id="search" >
       <div class="search-section">
-        <button>Search By Title</button>
-        <button>Search By Title</button>
+        <button onclick="getSearch(this.id)" id="by-title">Search By Title</button>
+        <button onclick="getSearch(this.id)" id="by-cat">Search By Category</button>
       </div>
+      <div class="delete_all" id="delete_all"></div>
       <table>
         <!-- <thead> -->
             <tr>
@@ -38,38 +39,18 @@
                 <th>Name</th>
                 <th>PRICE</th>
                 <th>ADS</th>
+                <th>TAX</th>
                 <th>DISCOUNT</th>
                 <th>TOTAL</th>
                 <th>CATEGORY</th>
+                <th>DELETE </th>
                 <th>UPDATE</th>
-                <th>DELETE</th>
             </tr>
         <!-- </thead> -->
-        <tbody>
-            <tr>
-              <th>ID</th>
-                <th>Name</th>
-                <th>PRICE</th>
-                <th>ADS</th>
-                <th>DISCOUNT</th>
-                <th>TOTAL</th>
-                <th>CATEGORY</th>
-                <td><button>xx</button></td>
-                <td><button>xx</button></td>
-            </tr>
+        <tbody id="tbody">
+          
             
-            <tr>
-              <th>ID</th>
-                <th>Name</th>
-                <th>PRICE</th>
-                <th>ADS</th>
-                <th>DISCOUNT</th>
-                <th>TOTAL</th>
-                <th>CATEGORY</th>
-              <td><button>xx</button></td>
-              <td><button>xx</button></td>
-          </tr>
-          <tr>
+          <!-- <tr>
             <th>ID</th>
             <th>Name</th>
             <th>PRICE</th>
@@ -79,7 +60,7 @@
             <th>CATEGORY</th>
             <td><button>xx</button></td>
             <td><button>xx</button></td>
-        </tr>
+        </tr> -->
         </tbody>
     </table>
     </div>
@@ -87,6 +68,6 @@
 
   </div>
 
-  
+  <script src="index.js"></script>
 </body>
 </html>
