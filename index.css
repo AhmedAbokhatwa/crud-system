@@ -73,9 +73,17 @@ button:hover{
   justify-content: space-between;
 }
 .search-section button{
-  width: 45%;
+  width: 40%;
 }
 table{
   width: 100%;
+  
+}
+.delete_all button{
+ margin: 10px 0px;
+}
+table button{
+  width: 100%;
+  
   
 }
